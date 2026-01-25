@@ -1,13 +1,34 @@
-<!DOCTYPE html>
-<html lang="en">
-<head>
-</head1>
-"Witaj na mojej stronie przykladowej  - zmiana kodu "
-    <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to my repo learning curve   - change  </title>
-</head>
-<body>
-    
-</body>
-</html>
+<div id="fleet-dashboard" style="border: 1px solid #ccc; padding: 15px; border-radius: 8px; width: 300px;">
+    </div>
+
+<script>
+    // Klasa reprezentująca Twój konkretny model
+    class Mazda6 {
+        constructor() {
+            this.marka = "Mazda";
+            this.model = "6 GJ Sedan";
+            this.rocznik = 2015; //
+            this.status = "Sprawny";
+        }
+
+        napraw() {
+            this.status = "W trakcie naprawy (Elektryka)...";
+            this.render(); // Odśwież widok po zmianie
+        }
+
+        render() {
+            const dashboard = document.getElementById('fleet-dashboard');
+            dashboard.innerHTML = `
+                <h3>Panel Floty</h3>
+                <p><strong>Pojazd:</strong> ${this.marka} ${this.model}</p>
+                <p><strong>Rocznik:</strong> ${this.rocznik}</p>
+                <p><strong>Status:</strong> <span id="status-tag">${this.status}</span></p>
+                <button onclick="mojeAuto.napraw()">Zgłoś Usterkę</button>
+            `;
+        }
+    }
+
+    // Tworzymy obiekt Twojej Mazdy
+    const mojeAuto = new Mazda6();
+    mojeAuto.render(); // Pierwsze wyświetlenie
+</script>

@@ -1,13 +1,58 @@
-<!DOCTYPE html>
-<html lang="en">
+
+<html lang="pl">
 <head>
-</head1>
-"Witaj na mojej stronie przykladowej  zmiana zmiana as dasd asd  "
     <meta charset="UTF-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Welcome to my repo learning curve </title>
+    <title>Moj Pierwszy baner</title>
+    <style>
+        /* Styl dla baneru na środku u góry */
+.banner {
+    text-align: center;
+    background-color: #0b655f;
+    color: white;
+    padding: 20px;
+    margin-bottom: 20px;
+}
+
+/* Ustawienie układu: Menu po lewej, Treść po prawej */
+.main-container {
+    display: flex; /* To magiczna komenda, która stawia elementy obok siebie */
+    gap: 20px;
+}
+
+/* Styl dla menu po lewej */
+.sidebar {
+    width: 200px;
+    background-color: #0b655f;
+    padding: 15px;
+    border-right: 2px solid #dddddd;
+    height: 100vh; /* Menu na całą wysokość ekranu */
+}
+
+/* Styl dla głównej treści */
+.content {
+    flex-grow: 1; /* Zajmij resztę dostępnego miejsca */
+    padding: 15px;
+}
+    </style>
 </head>
 <body>
+    <header class="banner">
+    <h1>Moj panel</h1>
+</header>
+
+<div class="main-container">
+    <aside class="sidebar">
+        <h3>Menu Wyboru</h3>
+        <ul>
+            <li>Hasla</li>
+            <li>moje notatki kursu</li>
+            <li>STatus moich szkolen</li>
+        </ul>
+    </aside>
     
-</body>
+    <main class="content">
+        <p>Wybierz opcję z menu po lewej, aby wyswietlic.</p>
+    </main>
+</div>
+    </body>
 </html>
